@@ -54,7 +54,7 @@ public class ChromaClient
 
 	public async Task<ChromaHeartbeat> Heartbeat()
 	{
-		return await _httpClient.Get<ChromaHeartbeat>("", new RequestQueryParams());
+		return await _httpClient.Get<ChromaHeartbeat>("heartbeat", new RequestQueryParams());
 	}
 
 	public async Task<ChromaCollection> CreateCollection(string name, Dictionary<string, object>? metadata = null, string? tenant = null, string? database = null)
